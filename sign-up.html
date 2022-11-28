@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-up</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="date-of-birth.js" defer></script>
+</head>
+
+<body>
+    <!-- <div class="spline">
+        <iframe src='https://my.spline.design/planet-e254bad0d47fd8ee44e6d8280c4969f6/' frameborder='0' width='100%'
+            height='100%'></iframe>
+    </div> -->
+    <main>
+        <form action="" method="post" class="sign-up-form">
+            <div class="heading">
+                <h1>Sign Up</h1>
+                <p>Have an account already? <span class="teal">Log in</span></p>
+            </div>
+            <div class="form-row">
+                <label for="first-name">First name</label>
+                <input type="text" id="first-name" name="first-name" placeholder="Enter your first name" required>
+            </div>
+
+            <div class="form-row">
+                <label for="last-name">Last name</label>
+                <input type="text" name="last-name" id="last-name" placeholder="Enter your last name" required>
+            </div>
+
+            <div class="form-row">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" placeholder="Enter your email" required>
+            </div>
+
+            <div class="form-row">
+                <label for="date-of-birth">Date of birth</label>
+                <div class="age-selection">
+                    <select name="day" id="day" required>
+                        <option value="" selected style="display: none;">DD</option>
+                    </select>
+                    <select name="month" id="month" required>
+                        <option value="" selected style="display: none;">MM</option>
+                    </select>
+                    <select name="year" id="year" required>
+                        <option value="0" selected style="display: none;">YYYY</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" placeholder="Enter your password" required>
+            </div>
+
+            <!-- Used to validate (no name attribute) -->
+            <div class="form-row">
+                <label for="confirm-password">Confirm password</label>
+                <input type="password" id="confirm-password" placeholder="Enter your password" required>
+            </div>
+
+            <div class="form-row">
+                <button type="submit">Create Account</button>
+            </div>
+
+            <div class="form-row">
+                <label for="terms">
+                    <input type="checkbox" id="terms" name="terms" required>
+                    <span>Check here to indicate that you have read and agree to the terms, <span class="teal">“I
+                            solemnly
+                            swear
+                            I'm up to no
+                            good”</span></span>
+                </label>
+            </div>
+        </form>
+    </main>
+
+</body>
+
+</html>
