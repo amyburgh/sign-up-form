@@ -8,6 +8,7 @@
     <title>Sign-up</title>
     <link rel="stylesheet" href="style.css">
     <script src="date-of-birth.js" defer></script>
+    <script src="password-validation.js" defer></script>
 </head>
 
 <body>
@@ -19,7 +20,7 @@
         <form action="" method="post" class="sign-up-form">
             <div class="heading">
                 <h1>Sign Up</h1>
-                <p>Have an account already? <span class="teal">Log in</span></p>
+                <p>Have an account already? <span class="teal"><a href="#">Log in</a></span></p>
             </div>
             <div class="form-row">
                 <label for="first-name">First name</label>
@@ -40,10 +41,10 @@
                 <label for="date-of-birth">Date of birth</label>
                 <div class="age-selection">
                     <select name="day" id="day" required>
-                        <option value="" selected style="display: none;">DD</option>
+                        <option value="0" selected style="display: none;">DD</option>
                     </select>
                     <select name="month" id="month" required>
-                        <option value="" selected style="display: none;">MM</option>
+                        <option value="0" selected style="display: none;">MM</option>
                     </select>
                     <select name="year" id="year" required>
                         <option value="0" selected style="display: none;">YYYY</option>
@@ -51,15 +52,20 @@
                 </div>
             </div>
 
-            <div class="form-row">
+            <div class="form-row pwd">
                 <label for="password">Password</label>
-                <input type="password" name="password" id="password" placeholder="Enter your password" required>
+                <input type="password" name="password" id="password" placeholder="Enter your password" required
+                    pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}"
+                    title="Must be 6 or more characters, contain at least one uppercase, one lowercase and one number.">
+                <span class="password-msg"></span>
             </div>
 
-            <!-- Used to validate (no name attribute) -->
-            <div class="form-row">
+            <div class="form-row pwd">
                 <label for="confirm-password">Confirm password</label>
-                <input type="password" id="confirm-password" placeholder="Enter your password" required>
+                <input type="password" id="confirm-password" placeholder="Enter your password" required
+                    pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}"
+                    title="Must be 6 or more characters, contain at least one uppercase, one lowercase and one number.">
+                <span class="confirm-msg"></span>
             </div>
 
             <div class="form-row">

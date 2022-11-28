@@ -12,11 +12,12 @@
     --grey-color: #929497;
     --light-grey-color: #e5e7e8;
     --red-crayola-color: #EF3054;
+    --alice-blue-color: #E8F1F2;
 }
 
 body {
     font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    color: white;
+    color: var(--alice-blue-color);
     background-color: var(--bg-color);
     font-size: 1rem;
     line-height: 1.3;
@@ -42,6 +43,11 @@ span.teal {
     color: var(--grey-color);
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
 .sign-up-form .heading {
     margin-bottom: 4rem;
 }
@@ -52,7 +58,8 @@ span.teal {
 }
 
 .form-row {
-    margin-bottom: 40px;
+    /* position: relative; */
+    margin-bottom: 2rem;
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
@@ -66,7 +73,7 @@ span.teal {
     width: 100%;
     padding: 0.6rem;
     font-size: 0.875rem;
-    color: white;
+    color: var(--alice-blue-color);
 }
 
 .form-row label {
@@ -82,17 +89,19 @@ span.teal {
 
 .form-row .checkbox-label {
     margin-bottom: 0;
+    cursor: pointer;
 }
 
 .form-row button {
     font-size: 1rem;
     font-weight: bold;
 
-    color: white;
+    color: var(--alice-blue-color);
     background-color: var(--teal-color);
 
     border: none;
 
+    margin-top: 1rem;
     padding: 10px 40px;
     cursor: pointer;
 }
@@ -116,7 +125,6 @@ span.teal {
     accent-color: var(--teal-color);
     /* height: 1rem; */
     /* margin: 0 1rem 0 0; */
-
 }
 
 .form-row input:hover {
@@ -141,4 +149,11 @@ span.teal {
 
 .form-row input:not(:focus):not(:placeholder-shown):invalid {
     border: 1px solid var(--red-crayola-color);
+}
+
+.password-msg,
+.confirm-msg {
+    bottom: -1.2rem;
+    font-size: smaller;
+    color: var(--red-crayola-color);
 }

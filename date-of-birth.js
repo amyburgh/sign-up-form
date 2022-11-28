@@ -64,7 +64,7 @@ const addDays = function (month, leap) {
         option.textContent = day;
         daySelect.appendChild(option);
     }
-    if (store !== '' && store <= days)
+    if (store !== 0 && store <= days)
         daySelect.value = store;
 }
 
@@ -74,6 +74,6 @@ yearSelect.onchange = () =>
 monthSelect.onchange = () =>
     addDays(monthSelect.value, yearSelect.value % 4 == 0);
 
-addMonths();
 addYears();
+addMonths();
 addDays('January', false);
