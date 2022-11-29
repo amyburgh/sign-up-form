@@ -5,5 +5,5 @@ The sign-up form also incorporates basic client-side password validation using J
 
 ---
 
-[![Site preview](ScreenCapture.jpg)](https://amyburgh.github.io/sign-up-form/)
+[![Site preview](screenCapture.jpg)](https://amyburgh.github.io/sign-up-form/)
 <p style="text-align:center">☝️ *Click to preview* ☝️</p>
